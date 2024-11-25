@@ -1,0 +1,13 @@
+--------------
+idkmanpity (556884913899700224):
+  Milk: 0
+  Supplies: 44
+  Materials: 33
+  Eggs: 0
+--------------
+chittykat (345138133429649408):
+  Milk: 0
+  Supplies: 44
+  Materials: 22
+  Eggs: 0
+--------------
