@@ -50,15 +50,16 @@ function run(query, params = []) {
 async function Initialization() {
   try {
     await run(`PRAGMA foreign_keys = ON;`);
-    await run(`CREATE TABLE IF NOT EXISTS inventory (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      type TEXT,
-      owner TEXT,
-      guild TEXT,
-      amount TEXT,
-      old TEXT
+    await run(`CREATE TABLE IF NOT EXISTS authorization (
+      role_id TEXT PRIMARY KEY,
+      manageable TEXT,
+      guild TEXT
     )`);
-    
+    await run(`CREATE TABLE IF NOT EXISTS messages (
+      message_id TEXT PRIMARY KEY, 
+      custom_id TEXT,
+      channel_id TEXT
+    )`);
   } catch (err) {
     console.error("Initialization error:", err);
   }
